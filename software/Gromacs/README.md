@@ -5,12 +5,12 @@ Container definition files and local installation instructions for GROMACS.
 Program overview: https://www.gromacs.org/
 
 Our recommendations for which recipe to use: 
-- HTC system, CPU only: [gromacs-cpu.def]
-- HTC system, GPUs: [gromacs-gpu.def]
+- HTC system, CPU only: [gromacs-cpu.def]()
+- HTC system, GPUs: [gromacs-gpu.def]()
 - HPC system, multi-node: 
-  - [gromacs-mpi.def]
-  - [local-install]
-  - [spack-install]
+  - [gromacs-mpi.def]()
+  - [local-install]()
+  - [spack-install]()
 
 ## [gromacs-cpu.def](gromacs-cpu.def)
 
