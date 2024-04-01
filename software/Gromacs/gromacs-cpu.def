@@ -1,0 +1,21 @@
+Bootstrap: docker
+From: ubuntu:24.04
+
+%post
+  # Install some shared library requirements
+  export DEBIAN_FRONTEND=noninteractive
+  apt update -y
+  apt install -y THINGS GO HERE
+
+  tar xfz gromacs-2021.tar.gz
+  cd gromacs-2021
+  mkdir build
+  cd build
+  cmake .. -DGMX_BUILD_OWN_FFTW=ON -DREGRESSIONTEST_DOWNLOAD=ON
+  make
+  make check
+  make install
+
+# This needs to be added to your job script
+# source /usr/local/gromacs/bin/GMXRC
+
